@@ -1,0 +1,18 @@
+﻿<Window x:Class="HospitalRecordSys.ReadyWord"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="ReadyWord" Height="600" Width="1000">
+    <Grid>
+        <Label Content="全部输入已经完成，是否生成word" HorizontalAlignment="Left" Margin="238,174,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="But_Update_Word" Content="Button" HorizontalAlignment="Left" Margin="516,180,0,0" VerticalAlignment="Top" Width="74" Click="But_Update_Word_Click"/>
+        <ToolBar HorizontalAlignment="Left" Margin="540,10,0,0" VerticalAlignment="Top" Width="452" Height="27">
+            <Label x:Name="Lab_JobNum" Content="工号：" Height="30" VerticalAlignment="Top" Margin="0,-3,0,-5" Width="46"/>
+            <Label x:Name="Lab_ShowJobNum" Content="" Height="27" VerticalAlignment="Top" Width="63" Margin="0,0,0,-5"/>
+            <Label x:Name="Lab_BINNum" Content="当前住院号:" Height="30" VerticalAlignment="Top" Margin="0,-3,0,-5" Width="74"/>
+            <Label x:Name="Lab_ShowBINNum" Content="" Height="27" VerticalAlignment="Top" Margin="0,0,0,-5" Width="81"/>
+            <Label x:Name="Lab_BINName" Content="病人姓名:" Height="30" VerticalAlignment="Top" Margin="0,-3,0,-5" Width="74"/>
+            <Label x:Name="Lab_ShowBINName" Content="" Height="27" VerticalAlignment="Top" Width="81"/>
+        </ToolBar>
+
+    </Grid>
+</Window>

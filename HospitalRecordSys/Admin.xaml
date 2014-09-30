@@ -1,0 +1,18 @@
+﻿<Window x:Class="HospitalRecordSys.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Admin" Height="600" Width="600">
+    <Grid>
+        <TextBox x:Name="Text_JobNum" HorizontalAlignment="Left" Height="23" Margin="206,87,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="工作号" HorizontalAlignment="Left" Margin="108,84,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Text_JobName" HorizontalAlignment="Left" Height="23" Margin="206,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="姓名" HorizontalAlignment="Left" Margin="108,116,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Text_JobPwd" HorizontalAlignment="Left" Height="23" Margin="206,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="密码" HorizontalAlignment="Left" Margin="108,146,0,0" VerticalAlignment="Top"/>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="-277,172,0,0" VerticalAlignment="Top"/>
+        <Button HorizontalAlignment="Left" Margin="184,198,0,0" VerticalAlignment="Top" Width="75">
+            <Button Content="增加医生" Width="75" Click="Button_Click"/>
+        </Button>
+
+    </Grid>
+</Window>

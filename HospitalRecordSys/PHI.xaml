@@ -1,0 +1,24 @@
+﻿<Window x:Class="HospitalRecordSys.PHI"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="PHI" Height="600" Width="1000">
+    <Grid>
+        <Grid x:Name="Grid_PHI_Show" Height="181" Margin="10,10,849,0" VerticalAlignment="Top" IsEnabled="True" >
+            <CheckBox x:Name="CBox_PNA" Content="肺炎" HorizontalAlignment="Left" Margin="10,19,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="CBox_BEA" Content="支气管哮喘" HorizontalAlignment="Left" Margin="10,49,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="CBox_COPD" Content="慢性阻塞性肺疾病" HorizontalAlignment="Left" Margin="10,83,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="CBox_LunCA" Content="肺CA" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top"/>
+            <CheckBox x:Name="CBox_Pleuraleffusion" Content="胸腔积液" HorizontalAlignment="Left" Margin="10,156,0,0" VerticalAlignment="Top"/>
+        </Grid>
+        <Button x:Name="update_PHI" Content="Button" HorizontalAlignment="Left" Margin="393,248,0,0" VerticalAlignment="Top" Width="75" Click="update_PHI_Click"/>
+        <ToolBar HorizontalAlignment="Left" Margin="540,0,0,0" VerticalAlignment="Top" Width="452" Height="27">
+            <Label x:Name="Lab_JobNum" Content="工号：" Height="30" VerticalAlignment="Top" Margin="0,-3,0,-5" Width="46"/>
+            <Label x:Name="Lab_ShowJobNum" Content="" Height="27" VerticalAlignment="Top" Width="63" Margin="0,0,0,-5"/>
+            <Label x:Name="Lab_BINNum" Content="当前住院号:" Height="30" VerticalAlignment="Top" Margin="0,-3,0,-5" Width="74"/>
+            <Label x:Name="Lab_ShowBINNum" Content="" Height="27" VerticalAlignment="Top" Margin="0,0,0,-5" Width="81"/>
+            <Label x:Name="Lab_BINName" Content="病人姓名:" Height="30" VerticalAlignment="Top" Margin="0,-3,0,-5" Width="74"/>
+            <Label x:Name="Lab_ShowBINName" Content="" Height="27" VerticalAlignment="Top" Width="81"/>
+        </ToolBar>
+
+    </Grid>
+</Window>

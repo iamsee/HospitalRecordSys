@@ -1,0 +1,275 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="HospitalRecordSys.PHI_Pleuraleffusion"
+        Title="PHI_Pleuraleffusion" Height="600" Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="701*"/>
+            <ColumnDefinition Width="291*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="胸腔积液" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="CB_BreathHard" HorizontalAlignment="Left" Margin="175,49,0,0" VerticalAlignment="Top" Width="56">
+            <ComboBoxItem Content="否" IsSelected="True"/>
+            <ComboBoxItem Content="是"/>
+
+
+        </ComboBox>
+        <Label Content="是否出现，胸闷、喘息状况" HorizontalAlignment="Left" Margin="2,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.675,0.04" Height="23"/>
+        <Grid x:Name="Grid_BreathHard" HorizontalAlignment="Left" Height="95" Margin="267,75,0,0" VerticalAlignment="Top" Width="715" Grid.ColumnSpan="2">
+            <Grid x:Name="Grid_PNABreathHard" HorizontalAlignment="Left" Width="808" Height="92" VerticalAlignment="Top" Margin="-27,-25,-66,0">
+                <Label x:Name="Lab_BreathHard" Content="呼吸困难" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="Lab_BreathHardLevel" Content="程度:" HorizontalAlignment="Left" Margin="73,10,0,0" VerticalAlignment="Top"/>
+                <ComboBox x:Name="CB_BreathHardLevel" HorizontalAlignment="Left" Margin="112,14,0,0" VerticalAlignment="Top" Width="224">
+                    <ComboBoxItem Content="平路快步或登山，上楼时气短明显" IsSelected="True" />
+                    <ComboBoxItem Content="平路步行100米即气短"/>
+                    <ComboBoxItem Content="稍微活动(穿衣，谈话)即气短"/>
+                    <ComboBoxItem Content="静息时气短"/>
+                </ComboBox>
+                <Label x:Name="Lab_BreathHardStartTime" Content="开始时间:" HorizontalAlignment="Left" Margin="70,40,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="Lab_BreathHardStartDeepTime" Content="加重时间:" HorizontalAlignment="Left" Margin="71,65,0,0" VerticalAlignment="Top"/>
+                <Label x:Name="Lab_BreathHardHaveDrug" Content="平时吃药:" HorizontalAlignment="Left" Margin="363,12,0,0" VerticalAlignment="Top"/>
+                <ComboBox x:Name="CB_BreathHardHaveDrug" HorizontalAlignment="Left" Margin="438,10,0,0" VerticalAlignment="Top" Width="87">
+                    <ComboBoxItem Content="无" IsSelected="True" />
+                    <ComboBoxItem Content="有"/>
+
+                </ComboBox>
+                <Label x:Name="Lab_BreathHardStartTimeYear" Content="年" HorizontalAlignment="Left" Margin="184,42,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.541,1.4" Width="30"/>
+                <Label x:Name="Lab_BreathHardStartTimeMonth" Content="月" HorizontalAlignment="Left" Margin="248,42,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.541,1.4" Width="30"/>
+                <Label x:Name="Lab_BreathHardStartTimeDay" Content="日" HorizontalAlignment="Left" Margin="319,42,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.541,1.4" Width="30"/>
+                <Label x:Name="Lab_BreathHardStartDeepTime_Year" Content="年" HorizontalAlignment="Left" Margin="184,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.541,1.4" Width="30"/>
+                <Label x:Name="Lab_BreathHardStartDeepTime_Month" Content="月" HorizontalAlignment="Left" Margin="248,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.541,1.4" Width="30"/>
+                <Label x:Name="Lab_BreathHardStartDeepTime_Day" Content="日" HorizontalAlignment="Left" Margin="319,65,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.541,1.4" Width="30"/>
+                <ComboBox x:Name="CB_BreathHardStartTimeYear" HorizontalAlignment="Left" Margin="131,43,0,0" VerticalAlignment="Top" Width="58" DropDownClosed="CB_BreathHardStartTimeYear_DropDownClosed" SelectionChanged="CB_BreathHardStartTimeYear_SelectionChanged"/>
+                <!---->
+				<ComboBox x:Name="CB_BreathHardStartTimeMonth" HorizontalAlignment="Left" Margin="203,44,0,0" VerticalAlignment="Top" Width="44" RenderTransformOrigin="1.364,1.286" DropDownClosed="CB_BreathHardStartTimeMonth_DropDownClosed" SelectionChanged="CB_BreathHardStartTimeMonth_SelectionChanged"/>
+				<ComboBox x:Name="CB_BreathHardStartTimeDay" HorizontalAlignment="Left" Margin="273,44,0,0" VerticalAlignment="Top" Width="46" RenderTransformOrigin="1.364,1.286"/>
+				<ComboBox x:Name="CB_BreathHardStartDeepTime_Year" HorizontalAlignment="Left" Margin="131,67,0,0" VerticalAlignment="Top" Width="58" DropDownClosed="CB_BreathHardStartDeepTime_Year_DropDownClosed" SelectionChanged="CB_BreathHardStartDeepTime_Year_SelectionChanged"/>
+				<ComboBox x:Name="CB_BreathHardStartDeepTime_Month" HorizontalAlignment="Left" Margin="203,67,0,0" VerticalAlignment="Top" Width="44" RenderTransformOrigin="1.364,1.286" DropDownClosed="CB_BreathHardStartDeepTime_Month_DropDownClosed" SelectionChanged="CB_BreathHardStartDeepTime_Month_SelectionChanged"/>
+				<ComboBox x:Name="CB_BreathHardStartDeepTime_Day" HorizontalAlignment="Left" Margin="273,67,0,0" VerticalAlignment="Top" Width="46" RenderTransformOrigin="1.364,1.286"/>
+				<Grid x:Name="Grid_BreathHardHaveDrug1" HorizontalAlignment="Left" Height="38" Margin="371,37,0,0" VerticalAlignment="Top" Width="194" IsEnabled="False">
+					<Label x:Name="Lab_BreathHardHaveDrugName" Content="药名:" HorizontalAlignment="Left" Margin="1,4,0,0" VerticalAlignment="Top"/>
+					<TextBox x:Name="Text_BreathHardHaveDrugName" HorizontalAlignment="Left" Height="23" Margin="64,4,0,0" TextWrapping="Wrap" Text="云南白药" VerticalAlignment="Top" Width="120"/>
+				</Grid>
+			</Grid>
+		</Grid>
+		<Grid x:Name="Grid_PNAFever" HorizontalAlignment="Left" Height="74" Margin="236,174,0,0" VerticalAlignment="Top" Width="672" Grid.ColumnSpan="2">
+			<Label x:Name="Lab_Fever" Content="发热" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Cursor=""/>
+			<Label x:Name="Lab_LastTimeFever" Content="持续时间" HorizontalAlignment="Left" Margin="59,9,0,0" VerticalAlignment="Top"/>
+			<Label x:Name="Lab_LastTimeDayFever" Content="天" HorizontalAlignment="Left" Margin="169,11,0,0" VerticalAlignment="Top" Height="24"/>
+			<Label x:Name="Lab_HighestHeatFever" Content="最高体温" HorizontalAlignment="Left" Margin="59,27,0,0" VerticalAlignment="Top"/>
+			<Label x:Name="Lab_HighestHeatDuFever" Content="度" HorizontalAlignment="Left" Margin="169,30,0,0" VerticalAlignment="Top" Height="24"/>
+			<Label x:Name="Lab_TimeRangeFever" Content="持续时间段" HorizontalAlignment="Left" Margin="213,3,0,0" VerticalAlignment="Top"/>
+			<CheckBox x:Name="CBox_MoningFever" Content="早晨" HorizontalAlignment="Left" Margin="283,10,0,0" VerticalAlignment="Top"/>
+			<CheckBox x:Name="CBox_AfternoonFever" Content="下午" HorizontalAlignment="Left" Margin="332,10,0,0" VerticalAlignment="Top"/>
+			<CheckBox x:Name="CBox_NightFever" Content="夜里" HorizontalAlignment="Left" Margin="381,10,0,0" VerticalAlignment="Top" Width="46"/>
+			<CheckBox x:Name="Lab_TimeRange_OtherFever" Content="其他时间" HorizontalAlignment="Left" Margin="213,33,0,0" VerticalAlignment="Top" Width="70"/>
+			<TextBox x:Name="Text_TimeRange_OtherFever" HorizontalAlignment="Left" Height="23" Margin="288,27,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="139"/>
+			<Label x:Name="Lab_ShakesFever" Content="是否寒战、畏寒:" HorizontalAlignment="Left" Margin="59,49,0,-1" VerticalAlignment="Top" Height="26"/>
+			<ComboBox x:Name="CB_ShakesFever" HorizontalAlignment="Left" Margin="161,51,0,0" VerticalAlignment="Top" Width="45">
+				<ComboBoxItem Content="是" />
+				<ComboBoxItem Content="否" IsSelected="True"/>
+			</ComboBox>
+			<Label x:Name="Lab_FeverDrugFever" Content="是否使用过退烧药:" HorizontalAlignment="Left" Margin="435,7,0,0" VerticalAlignment="Top" Height="26"/>
+			<ComboBox x:Name="CB_Shakes_Fever" HorizontalAlignment="Left" Margin="549,7,0,0" VerticalAlignment="Top" Width="45">
+				<ComboBoxItem Content="是" />
+				<ComboBoxItem Content="否" IsSelected="True"/>
+			</ComboBox>
+			<Grid x:Name="Grid_FeverDrug" HorizontalAlignment="Left" Height="42" Margin="444,30,0,0" VerticalAlignment="Top" Width="354">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="23*"/>
+					<ColumnDefinition Width="95*"/>
+				</Grid.ColumnDefinitions>
+				<Label x:Name="Lab_DrugName" Content="药名:" HorizontalAlignment="Left" Margin="10,-2,0,0" VerticalAlignment="Top"/>
+				<TextBox x:Name="Text_DrugNameFever" HorizontalAlignment="Left" Height="23" Margin="49,0,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
+				<Label x:Name="Lab_DrugEffectFever" Content="药效:" HorizontalAlignment="Left" Margin="10,19,0,-2" VerticalAlignment="Top"/>
+				<ComboBox x:Name="CB_DrugEffectFever" HorizontalAlignment="Left" Margin="49,23,0,0" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2">
+					<ComboBoxItem Content="不明显" IsSelected="True"/>
+					<ComboBoxItem Content="有效果"/>
+				</ComboBox>
+
+			</Grid>
+			<ComboBox x:Name="CB_LastTimeDayFever" HorizontalAlignment="Left" Margin="117,12,0,0" VerticalAlignment="Top" Width="52"/>
+			<ComboBox x:Name="CB_HighestHeatDuFever" HorizontalAlignment="Left" Margin="117,33,0,0" VerticalAlignment="Top" Width="52" Height="18"/>
+		</Grid>
+		<ComboBox x:Name="CB_Fever" HorizontalAlignment="Left" Margin="111,170,0,0" VerticalAlignment="Top" Width="120">
+			<ComboBoxItem Content="否" IsSelected="True"/>
+			<ComboBoxItem Content="是"/>
+
+
+		</ComboBox>
+		<Label Content="是否出现发热" HorizontalAlignment="Left" Margin="2,168,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.675,0.04" Height="23"/>
+
+		<Grid x:Name="Grid_Cough" HorizontalAlignment="Left" Height="114" Margin="236,258,0,0" VerticalAlignment="Top" Width="756" Grid.ColumnSpan="2">
+			<Label Content="持续时间" HorizontalAlignment="Left" Margin="10,24,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.675,0.04" Height="23"/>
+			<ComboBox x:Name="CB_Cough_LastTime" HorizontalAlignment="Left" Margin="73,24,0,0" VerticalAlignment="Top" Width="87">
+				
+			</ComboBox>
+			<Label Content="何时明显" HorizontalAlignment="Left" Margin="10,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.675,0.04" Height="23"/>
+			<ComboBox x:Name="CB_Cough_ClearTime" HorizontalAlignment="Left" Margin="73,50,0,0" VerticalAlignment="Top" Width="87">
+				<ComboBoxItem Content="无明显时间" IsSelected="True"/>
+				<ComboBoxItem Content="早晨"/>
+				<ComboBoxItem Content="下午"/>
+				<ComboBoxItem Content="晚上"/>
+			</ComboBox>
+			<Label x:Name="Lab_LuggiesCough" Content="是否有痰:" HorizontalAlignment="Left" Margin="244,21,0,0" VerticalAlignment="Top"/>
+			<ComboBox x:Name="CB_Luggies" HorizontalAlignment="Left" Margin="310,24,0,0" VerticalAlignment="Top" Width="43">
+				<ComboBoxItem Content="是" />
+				<ComboBoxItem Content="否" IsSelected="True"/>
+			</ComboBox>
+			<Grid x:Name="Grid_Luggies" HorizontalAlignment="Left" Height="64" Margin="244,46,0,0" VerticalAlignment="Top" Width="280">
+				<Label x:Name="Lab_ColorLuggiesCough" Content="颜色:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="23,0,0,0"/>
+				<ComboBox x:Name="CB_ColorLuggiesCough" HorizontalAlignment="Left" Margin="61,1,0,0" VerticalAlignment="Top" Width="87">
+					<ComboBoxItem Content="清痰" IsSelected="True" />
+					<ComboBoxItem Content="白色粘液"/>
+					<ComboBoxItem Content="黄痰"/>
+				</ComboBox>
+				<Label x:Name="Lab_ClearTimeLuggies_Cough" Content="何时痰多:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,20,0,0"/>
+				<ComboBox x:Name="CB_Luggies_Cough" HorizontalAlignment="Left" Margin="59,23,0,0" VerticalAlignment="Top" Width="89">
+					<ComboBoxItem Content="无明显时间" IsSelected="True" />
+					<ComboBoxItem Content="早晨"/>
+					<ComboBoxItem Content="睡前"/>
+					<ComboBoxItem Content="持续"/>
+				</ComboBox>
+				<Label x:Name="Lab_BloodLuggiesCough" Content="是否有血:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,40,0,-1"/>
+				<ComboBox x:Name="CB_BloodLuggiesCough" HorizontalAlignment="Left" Margin="59,43,0,0" VerticalAlignment="Top" Width="89">
+					<ComboBoxItem Content="无" IsSelected="True" />
+					<ComboBoxItem Content="偶尔"/>
+					<ComboBoxItem Content="多"/>
+
+				</ComboBox>
+			</Grid>
+		</Grid>
+		<ComboBox x:Name="CB_Cough" HorizontalAlignment="Left" Margin="111,258,0,0" VerticalAlignment="Top" Width="120">
+			<ComboBoxItem Content="否" IsSelected="True"/>
+			<ComboBoxItem Content="是"/>
+
+
+		</ComboBox>
+		<Label Content="是否咳嗽" HorizontalAlignment="Left" Margin="10,256,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.675,0.04" Height="23"/>
+		<Grid x:Name="Grid_PNAChestPain" HorizontalAlignment="Left" Height="42" Margin="249,372,-1,0" VerticalAlignment="Top" Width="744" Grid.ColumnSpan="2">
+			<Label x:Name="Lab_ChestPain" Content="胸痛" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+			<Label x:Name="LabChestPain_LastTimeChestPain" Content="持续时间" HorizontalAlignment="Left" Margin="59,14,0,0" VerticalAlignment="Top"/>
+			<TextBox x:Name="Text_LastTimeChestPain1" HorizontalAlignment="Left" Height="14" Margin="117,0,0,66" TextWrapping="Wrap" Text="1" VerticalAlignment="Bottom" Width="39" SelectionOpacity="0"/>
+			<Label x:Name="LabChestPain_LastTimeChestPainHour" Content="小时" HorizontalAlignment="Left" Margin="161,14,0,0" VerticalAlignment="Top" Height="24"/>
+			<Label x:Name="Lab_ChestPain_PainNature" Content="性质:" HorizontalAlignment="Left" Margin="198,14,0,0" VerticalAlignment="Top"/>
+			<ComboBox x:Name="CB_ChestPain_PainNature" HorizontalAlignment="Left" Margin="235,16,0,0" VerticalAlignment="Top" Width="87">
+				<ComboBoxItem Content="闷痛" IsSelected="True" />
+				<ComboBoxItem Content="针刺痛"/>
+				<ComboBoxItem Content="钝痛"/>
+
+			</ComboBox>
+			<Label x:Name="Lab_ChestPain_Position" Content="位置/与呼吸相关:" HorizontalAlignment="Left" Margin="328,14,0,0" VerticalAlignment="Top"/>
+			<ComboBox x:Name="CB_ChestPain_Position" HorizontalAlignment="Left" Margin="435,16,0,0" VerticalAlignment="Top" Width="178">
+				<ComboBoxItem Content="右侧/呼痛" IsSelected="True" />
+				<ComboBoxItem Content="左侧/吸痛"/>
+				<ComboBoxItem Content="双侧/呼吸痛"/>
+
+
+			</ComboBox>
+			<ComboBox x:Name="CB_ChestPain_LastTimeChestPainHour" HorizontalAlignment="Left" Margin="113,17,0,0" VerticalAlignment="Top" Width="52"/>
+		</Grid>
+		<ComboBox x:Name="CB_ChestPain" HorizontalAlignment="Left" Margin="92,374,0,0" VerticalAlignment="Top" Width="120">
+			<ComboBoxItem Content="否" IsSelected="True"/>
+			<ComboBoxItem Content="是"/>
+
+
+		</ComboBox>
+		<Label Content="是否胸痛" HorizontalAlignment="Left" Margin="10,372,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.675,0.04" Height="23"/>
+		<Grid x:Name="Grid_RapidBreath" HorizontalAlignment="Left" Height="84" Margin="162,419,0,0" VerticalAlignment="Top" Width="820" Grid.ColumnSpan="2">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="279*"/>
+				<ColumnDefinition Width="131*"/>
+			</Grid.ColumnDefinitions>
+			<Label Content="性质:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Margin="10,0,0,0"/>
+			<ComboBox x:Name="CB_RadidBreath" HorizontalAlignment="Left" Margin="52,0,0,63" VerticalAlignment="Bottom" Width="120">
+				<ComboBoxItem Content="与外界无关" IsSelected="True"/>
+				<ComboBoxItem Content="与外界有关"/>
+			</ComboBox>
+			<Label Content="开始时间:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Margin="223,0,0,0"/>
+			<ComboBox x:Name="CB_RadidBreath_StartTime_Year" HorizontalAlignment="Left" Margin="284,0,0,0" VerticalAlignment="Top" Width="71" DropDownClosed="CB_RadidBreath_StartTime_Year_DropDownClosed" SelectionChanged="CB_RadidBreath_StartTime_Year_SelectionChanged"/>
+			<ComboBox x:Name="CB_RadidBreath_StartTime_Day" HorizontalAlignment="Left" Margin="426,0,0,0" VerticalAlignment="Top" Width="71"/>
+			<ComboBox x:Name="CB_RadidBreath_StartTime_Month" HorizontalAlignment="Left" Margin="355,0,0,0" VerticalAlignment="Top" Width="71" DropDownClosed="CB_RadidBreath_StartTime_Month_DropDownClosed" SelectionChanged="CB_RadidBreath_StartTime_Month_SelectionChanged"/>
+			<Label Content="每次持续时间:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Margin="199,21,0,0"/>
+			<ComboBox x:Name="CB_RadidBreath_EveryLastTime" HorizontalAlignment="Left" Margin="284,22,0,0" VerticalAlignment="Top" Width="71"/>
+			<Label Content="每天发作次数:" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Margin="197,42,0,0"/>
+			<ComboBox x:Name="CB_RadidBreath_EveryDay_Times" HorizontalAlignment="Left" Margin="284,44,0,0" VerticalAlignment="Top" Width="71"/>
+			<Grid x:Name="Grid_Show_RadidBreath" HorizontalAlignment="Left" Height="61" Margin="0,23,0,0" VerticalAlignment="Top" Width="229" IsEnabled="False">
+				<CheckBox x:Name="CB_RadidBreath_1" Content="接触变应原" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+				<CheckBox x:Name="CB_RadidBreath_2" Content="冷空气" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="85,0,0,0"/>
+				<CheckBox x:Name="CB_RadidBreath_3" Content="物理刺激" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,15,0,0"/>
+				<CheckBox x:Name="CB_RadidBreath_4" Content="化学刺激" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="85,15,0,0"/>
+				<CheckBox x:Name="CB_RadidBreath_5" Content="病毒性呼吸道感染" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,30,0,0" Width="117"/>
+				<CheckBox x:Name="CB_RadidBreath_6" Content="运动" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="158,0,0,0"/>
+				<CheckBox x:Name="CB_RadidBreath_7" Content="其他" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,45,0,0"/>
+				<TextBox x:Name="Text_Show_RadidBreath_Other" HorizontalAlignment="Left" Height="23" Margin="49,44,0,-6" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180"/>
+			</Grid>
+			<Label Content="有无明显加重时间：" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Margin="502,0,0,0" Grid.ColumnSpan="2"/>
+			<ComboBox x:Name="CB_RadidBreath_StartDeepTime" HorizontalAlignment="Left" Margin="56,0,0,0" VerticalAlignment="Top" Width="43" Grid.Column="1">
+				<ComboBoxItem Content="无" IsSelected="True"/>
+				<ComboBoxItem Content="有"/>
+			</ComboBox>
+			<Grid x:Name="Grid_RadidBreath_StartDeepTime" HorizontalAlignment="Left" Height="22" Margin="509,21,0,0" VerticalAlignment="Top" Width="309" Grid.ColumnSpan="2">
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="49*"/>
+					<ColumnDefinition Width="260*"/>
+				</Grid.ColumnDefinitions>
+				<CheckBox x:Name="CB_RadidBreath_StartDeepTime_1" Content="早晨" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,7,0,0"/>
+				<CheckBox x:Name="CB_RadidBreath_StartDeepTime_2" Content="下午" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,7,0,0" Grid.Column="1"/>
+				<CheckBox x:Name="CB_RadidBreath_StartDeepTime_3" Content="晚上" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="49,7,0,0" Grid.Column="1"/>
+				<CheckBox x:Name="CB_RadidBreath_StartDeepTime_4" Content="其它" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="98,7,0,0" Grid.Column="1"/>
+				<TextBox x:Name="Text_RadidBreath_StartDeepTime_4" HorizontalAlignment="Left" Height="23" Margin="147,0,0,-1" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="113" Grid.Column="1" IsEnabled="False"/>
+			</Grid>
+			<Label Content="能否自行缓解：" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Margin="502,42,0,0" Grid.ColumnSpan="2"/>
+			<ComboBox x:Name="CB_RadidBreath_Better" HorizontalAlignment="Left" Margin="56,44,0,0" VerticalAlignment="Top" Width="43" Grid.Column="1">
+				<ComboBoxItem Content="否" IsSelected="True"/>
+				<ComboBoxItem Content="能"/>
+			</ComboBox>
+			<ComboBox x:Name="CB_RadidBreath_Better_Show" HorizontalAlignment="Left" Margin="509,63,0,0" VerticalAlignment="Top" Width="148" IsEnabled="False" Grid.ColumnSpan="2">
+				<ComboBoxItem Content="不用药缓解" IsSelected="True"/>
+				<ComboBoxItem Content="用药缓解"/>
+				<ComboBoxItem Content="用药无缓解"/>
+			</ComboBox>
+			<Grid x:Name="Grid_RadidBreath_Better_Drug" HorizontalAlignment="Left" Height="36" Margin="104,48,0,0" VerticalAlignment="Top" Width="156" Grid.Column="1">
+				<Label Content="有无明显加重时间：" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Margin="502,0,-464,-5"/>
+				<Label Content="有无明显加重时间：" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Margin="502,0,-464,-5"/>
+				<Label Content="有无明显加重时间：" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26" Margin="502,0,-464,-5"/>
+				<Label Content="药名:" HorizontalAlignment="Left" Margin="-1,9,0,0" VerticalAlignment="Top"/>
+				<TextBox x:Name="Text_RadidBreath_Better_DrugName" HorizontalAlignment="Left" Height="21" Margin="36,13,0,-13" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+			</Grid>
+		</Grid>
+		<ComboBox x:Name="CB_RapidBreath" HorizontalAlignment="Left" Margin="10,447,0,0" VerticalAlignment="Top" Width="88">
+			<ComboBoxItem Content="否" IsSelected="True"/>
+			<ComboBoxItem Content="是"/>
+
+
+		</ComboBox>
+		<Label Content="是否胸闷，气喘" HorizontalAlignment="Left" Margin="2,419,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.675,0.04" Height="23" Width="96"/>
+		<ComboBox x:Name="CB_Wasting" HorizontalAlignment="Left" Margin="18,543,0,0" VerticalAlignment="Top" Width="88">
+			<ComboBoxItem Content="否" IsSelected="True"/>
+			<ComboBoxItem Content="是"/>
+
+
+		</ComboBox>
+		<Label Content="是否消瘦" HorizontalAlignment="Left" Margin="10,515,0,0" VerticalAlignment="Top" RenderTransformOrigin="-2.675,0.04" Height="23" Width="96"/>
+		<Grid x:Name="Grid_Wasting" HorizontalAlignment="Left" Height="49" Margin="162,515,0,0" VerticalAlignment="Top" Width="297">
+			<Label Content="是否消瘦" HorizontalAlignment="Left" Margin="10,515,0,-489" VerticalAlignment="Top" RenderTransformOrigin="-2.675,0.04" Height="23" Width="96"/>
+			<Label Content="持续时间" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-2.675,0.04" Height="23" Width="96"/>
+			<ComboBox x:Name="CB_Wasting_LastTime" HorizontalAlignment="Left" Margin="61,2,0,0" VerticalAlignment="Top" Width="106"/>
+			<Label Content="月" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-2.675,0.04" Height="23" Width="96" Margin="167,2,0,0"/>
+			<Label Content="体重下降" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-2.675,0.04" Height="23" Width="96" Margin="0,23,0,0"/>
+			<ComboBox x:Name="CB_Wasting_KG" HorizontalAlignment="Left" Margin="61,28,0,0" VerticalAlignment="Top" Width="106"/>
+			<Label Content="KG" HorizontalAlignment="Left" VerticalAlignment="Top" RenderTransformOrigin="-2.675,0.04" Height="23" Width="96" Margin="167,23,0,0"/>
+		</Grid>
+		<Button x:Name="But_Update_Pleuraleffusion_xaml" Content="Button" HorizontalAlignment="Left" Margin="508,540,0,0" VerticalAlignment="Top" Width="75" Click="But_Update_Pleuraleffusion_xaml_Click"/>
+		<ToolBar HorizontalAlignment="Left" Margin="540,0,0,0" VerticalAlignment="Top" Width="452" Height="27" Grid.ColumnSpan="2">
+			<Label x:Name="Lab_JobNum" Content="工号：" Height="30" VerticalAlignment="Top" Margin="0,-3,0,-5" Width="46"/>
+			<Label x:Name="Lab_ShowJobNum" Content="" Height="27" VerticalAlignment="Top" Width="63" Margin="0,0,0,-5"/>
+			<Label x:Name="Lab_BINNum" Content="当前住院号:" Height="30" VerticalAlignment="Top" Margin="0,-3,0,-5" Width="74"/>
+			<Label x:Name="Lab_ShowBINNum" Content="" Height="27" VerticalAlignment="Top" Margin="0,0,0,-5" Width="81"/>
+			<Label x:Name="Lab_BINName" Content="病人姓名:" Height="30" VerticalAlignment="Top" Margin="0,-3,0,-5" Width="74"/>
+			<Label x:Name="Lab_ShowBINName" Content="" Height="27" VerticalAlignment="Top" Width="81"/>
+		</ToolBar>
+
+	</Grid>
+</Window>
