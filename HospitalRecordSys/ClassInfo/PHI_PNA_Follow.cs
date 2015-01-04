@@ -29,9 +29,9 @@ namespace HospitalRecordSys
         {
             sqlString = "select * from TB_PNA_Follow where BIHNum='" + BIHNum + "';";
             ds = db.GetDataSet(sqlString);
-            this.HeadPain = Convert.ToInt32(ds.Tables[0].Rows[0][1].ToString());
-            this.Nausea = Convert.ToInt32(ds.Tables[0].Rows[0][2].ToString());
-            this.AbdomenPain = Convert.ToInt32(ds.Tables[0].Rows[0][3].ToString());
+        //    this.HeadPain = Convert.ToInt32(ds.Tables[0].Rows[0][1].ToString());
+    //        this.Nausea = Convert.ToInt32(ds.Tables[0].Rows[0][2].ToString());
+  //          this.AbdomenPain = Convert.ToInt32(ds.Tables[0].Rows[0][3].ToString());
             this.Diarrhea = (ds.Tables[0].Rows[0][4].ToString());           
 
         }

@@ -97,7 +97,7 @@ namespace HospitalRecordSys
           this.BirthLocal = ds.Tables[0].Rows[0][3].ToString();
           this.Sex = ds.Tables[0].Rows[0][4].ToString();
           this.WorkOrg = ds.Tables[0].Rows[0][5].ToString();
-          this.Age = Convert.ToInt32(ds.Tables[0].Rows[0][6].ToString());
+      //    this.Age = Convert.ToInt32(ds.Tables[0].Rows[0][6].ToString());
           this.LiveLocal = ds.Tables[0].Rows[0][7].ToString();
           this.MarryState = ds.Tables[0].Rows[0][8].ToString();
           this.DeclarePer = ds.Tables[0].Rows[0][9].ToString();

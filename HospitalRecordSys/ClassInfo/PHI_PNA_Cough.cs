@@ -30,7 +30,7 @@ namespace HospitalRecordSys
             ds = db.GetDataSet(sqlString);
             this.LastTime = (ds.Tables[0].Rows[0][1].ToString());
             this.ClearTime = ds.Tables[0].Rows[0][2].ToString();
-            this.Luggies =Convert.ToInt32(ds.Tables[0].Rows[0][3].ToString());
+       //     this.Luggies =Convert.ToInt32(ds.Tables[0].Rows[0][3].ToString());
 
         }
     }

@@ -30,7 +30,7 @@ namespace HospitalRecordSys
         {
             sqlString = "select * from TB_PNA_ChestPain where BIHNum='" + BIHNum + "';";
             ds = db.GetDataSet(sqlString);
-            this.LastTime =Convert.ToInt32(ds.Tables[0].Rows[0][1].ToString());
+      //      this.LastTime =Convert.ToInt32(ds.Tables[0].Rows[0][1].ToString());
             this.PainNature = ds.Tables[0].Rows[0][2].ToString();
             this.Position = ds.Tables[0].Rows[0][3].ToString();
           

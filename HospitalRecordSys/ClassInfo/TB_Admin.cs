@@ -21,7 +21,7 @@ namespace HospitalRecordSys
 
         public void Update_TB_JobAdmin()
         {
-            sqlString = "update TB_JobAdmin set JobNum="+JobNum+",Pwd='"+Pwd+"',JobName='"+JobName+"';";
+            sqlString = "insert into TB_JobAdmin values("+JobNum+",'"+Pwd+"'"+",'"+JobName+"');";
            state =  db.ExecuteSQL(sqlString);
         }
     }

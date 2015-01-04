@@ -32,17 +32,17 @@ namespace HospitalRecordSys{
 
         public void get_TB_PersonalHis()
         {
-            sqlString = "select * from TB_PersonalHis where BIHNum =" + BIHNum + "';";
+            sqlString = "select * from TB_PersonalHis where BIHNum ='" + BIHNum + "';";
             ds = db.GetDataSet(sqlString);
             this.BirthLocal = (ds.Tables[0].Rows[0][1].ToString());
             this.LiveLocal = (ds.Tables[0].Rows[0][2].ToString());
-            this.GoLocal_State = Convert.ToInt32(ds.Tables[0].Rows[0][3].ToString());
+ //           this.GoLocal_State = Convert.ToInt32(ds.Tables[0].Rows[0][3].ToString());
             this.JobHow = (ds.Tables[0].Rows[0][4].ToString());
-            this.JobEnviron_State = Convert.ToInt32(ds.Tables[0].Rows[0][5].ToString());
-            this.Smoke_State = Convert.ToInt32(ds.Tables[0].Rows[0][6].ToString());
-            this.Drink_State = Convert.ToInt32(ds.Tables[0].Rows[0][7].ToString());
-            this.OtherHobby_State = Convert.ToInt32(ds.Tables[0].Rows[0][8].ToString());
-            this.Marriage_State = Convert.ToInt32(ds.Tables[0].Rows[0][9].ToString());
+ //           this.JobEnviron_State = Convert.ToInt32(ds.Tables[0].Rows[0][5].ToString());
+ //           this.Smoke_State = Convert.ToInt32(ds.Tables[0].Rows[0][6].ToString());
+ //           this.Drink_State = Convert.ToInt32(ds.Tables[0].Rows[0][7].ToString());
+ //           this.OtherHobby_State = Convert.ToInt32(ds.Tables[0].Rows[0][8].ToString());
+ //           this.Marriage_State = Convert.ToInt32(ds.Tables[0].Rows[0][9].ToString());
 
         }
     }
